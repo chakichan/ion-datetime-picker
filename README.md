@@ -15,9 +15,8 @@
 
 # Introduction
 
-I made this component because of poor implementation of native datetime picker in Android webview. How funny it was when I discovered that I can only pick a time between 0:00 and 11:59 on my 24-hour clock phone :)
-
-*Looking for a [picker](http://blog.ionic.io/ionic-2-fixing-date-inputs-for-the-mobile-web/) that works with Ionic framework v2?*
+This component was originally made by [katemihalikova](https://github.com/katemihalikova/ion-datetime-picker). This fork was made because of recent changes in Google Chrome 67's way
+of handling historic timezones.
 
 # Features
 
@@ -29,42 +28,6 @@ The ion-datetime-picker component has these features:
 - Configure popup title and button labels and classes
 - Configure i18n to get weekdays and months in your language
 - Configure size of a step
-
-# Demo
-
-Demo app is available - enter code `8d75a0ec` into [Ionic View](http://view.ionic.io/).
-Live demo is available on [Codepen](http://codepen.io/katemihalikova/full/dYvjzP/).
-
-#Screenshots
-
-<img src="/../screenshots/date.png?raw=true" alt="Date picker" width="239">
-<img src="/../screenshots/time.png?raw=true" alt="Time picker" width="239">
-<img src="/../screenshots/datetime.png?raw=true" alt="Datetime picker" width="239">
-
-# Installation
-
-1. Use bower or npm to install the new module:
-
-    ```bash
-    bower install ion-datetime-picker --save
-    ```
-
-    ```bash
-    npm install ion-datetime-picker --save
-    ```
-
-2. Import the `ion-datetime-picker` javascript and css file into your HTML file (or use [wiredep](https://github.com/taptapship/wiredep)):
-
-    ```html
-    <script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
-    <link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
-    ```
-
-3. Add `ion-datetime-picker` as a dependency on your Ionic app:
-
-    ```javascript
-    angular.module("myApp", ["ionic", "ion-datetime-picker"]);
-    ```
 
 # Usage
 
@@ -167,3 +130,7 @@ angular.module("myApp")
 ## Daylight saving time
 
 The datetime picker is using `Date` object with your browser's timezone, including any DST. When you change the date, hour, minute, or second, which sets the time to an invalid value because of moving from 2:00 to 3:00 at the beginning of DST, the time is automatically adjusted to a valid value. On the other hand, when the DST ends, I do NOT take the inserted hour into consideration, but this may be fixed in the future.
+
+# More info
+
+For more info, check the [original plugin](https://github.com/katemihalikova/ion-datetime-picker).
