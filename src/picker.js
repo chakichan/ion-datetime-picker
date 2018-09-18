@@ -73,7 +73,7 @@ angular.module("ion-datetime-picker", ["ionic"])
 
         $scope.processModel = function() {
           var date = $scope.modelDate instanceof Date ? $scope.modelDate : new Date();
-          $scope.year = $scope.dateEnabled ? date.getFullYear() : 0;
+          $scope.year = $scope.dateEnabled ? date.getFullYear() : 2018;
           $scope.month = $scope.dateEnabled ? date.getMonth() : 0;
           $scope.day = $scope.dateEnabled ? date.getDate() : 0;
           $scope.hour = $scope.timeEnabled ? date.getHours() : 0;
